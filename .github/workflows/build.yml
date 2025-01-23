@@ -10,3 +10,7 @@ env:
   AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACC_KEY_ID }}
   AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ID }}
   CONTAINER_NAME: myfirstapp:${{ github.sha }}
+
+jobs:
+  build-and-push:
+    name: Build and Push
