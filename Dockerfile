@@ -5,7 +5,7 @@ FROM python:3.8-slim
 WORKDIR /app
 
 # Install the cli
-RUN apt-get install -y awscli
+RUN apt-get update && apt-get install -y awscli
 
 # copy the current directory contains into the container at /app
 COPY . /app
