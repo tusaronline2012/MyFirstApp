@@ -35,4 +35,4 @@ jobs:
 
       - name: Build and Push tp ECR
         run: |
-          docker build -t $CONTAINER_NAME .
+          docker build -t $CONTAINER_NAME ./app
