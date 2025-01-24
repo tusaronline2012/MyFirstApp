@@ -33,6 +33,7 @@ jobs:
           aws ecr get-login-password --region us-east-1 |
           docker login --username AWS --password-stdin $AWS_ACCOUNT_ID.dkr.ecr.$AWS_DEFAULT_REGION.amazonaws.com/myfirstapp
 
-      - name: Build and Push tp ECR
+      - name: Build and Tag the Image
         run: |
           docker build -t $CONTAINER_NAME .
+          docker tag $CONTAINER_NAME $AWS_ACCOUNT_ID.dkr.ecr.$AWS_DEFAULT_REGION.amazonaws.com/myfirstapp
